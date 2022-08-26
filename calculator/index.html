@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/app.css">    
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="calculator">
+            <table>
+                <tdead>
+                    <tr>
+                        <td colspan="4">
+                            <div class="dispaly">
+                                <span id="display">0</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tdead>
+                <tbody>
+                    <tr>
+                        <td><a href="#" id="perc">%</a></td>
+                        <td><a href="#" id="ce">CE</a></td>
+                        <td><a href="#" id="c">C</a></td>
+                        <td><a href="#" id="back">back</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" id="inv">1/x</a></td>
+                        <td><a href="#" id="squa">x^2</a></td>
+                        <td><a href="#" id="sqrt">sqrt</a></td>
+                        <td><a href="#" id="div">/</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" id="nine" class="num" onclick="addToDisplay('7')">7</a></td>
+                        <td><a href="#" id="eight" class="num" onclick="addToDisplay('8')">8</a></td>
+                        <td><a href="#" id="seven" class="num" onclick="addToDisplay('9')">9</a></td>
+                        <td><a href="#" id="mult">x</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" id="four" class="num" onclick="addToDisplay('4')">4</a></td>
+                        <td><a href="#" id="five" class="num" onclick="addToDisplay('5')">5</a></td>
+                        <td><a href="#" id="six" class="num" onclick="addToDisplay('6')">6</a></td>
+                        <td><a href="#" id="less">-</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" id="one" class="num" onclick="addToDisplay('1')">1</a></td>
+                        <td><a href="#" id="two" class="num" onclick="addToDisplay('2')">2</a></td>
+                        <td><a href="#" id="three" class="num" onclick="addToDisplay('3')">3</a></td>
+                        <td><a href="#" id="add">+</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" id="signal" class="num" onclick="addToDisplay('+-')">+/-</a></td>
+                        <td><a href="#" id="cero" class="num" onclick="addToDisplay('0')">0</a></td>
+                        <td><a href="#" id="dot" class="num" onclick="addToDisplay(',')">,</a></td>
+                        <td><a href="#" id="equal">=</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
