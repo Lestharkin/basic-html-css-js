@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="css/local/app.css">
+    <title>Buena vida</title>
+</head>
+
+<body>
+
+    <div class="container-fluid mt-1">
+        <div class="row app-header">
+            <div class="col-sm-3 text-center">
+                <img src="img/logo/logo.jpg" alt="" class="img-fluid app-radius w-75 p-1">
+            </div>
+            <div class="col-sm-6 d-flex align-items-center p-1">
+                <div class="app-radius app-border-color w-100 text-center p-1">
+                    <form>
+                        <input type="search" placeholder="¿Qué producto estás buscando...?" name="search-input"
+                            id="search-input" class="p-1 ps-3" />
+                        <button class="btn btn-outline-success border-0 app-radius" type="submit"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewbox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-3 d-flex align-items-center p-1">
+                <table class="app-header-table text-center" id="app-id-header-table">
+                    <tr>
+                        <td>
+                            <a href="#" class="text-decoration-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#009929"
+                                    class="bi bi-heart" viewbox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#" class="text-decoration-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#009929"
+                                    class="bi bi-person-circle" viewbox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="" class="text-decoration-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#009929"
+                                    class="bi bi-basket3" viewbox="0 0 16 16">
+                                    <path
+                                        d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
+                                </svg>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="text-button text-decoration-none"><span>Mis&nbsp;Favoritos</span></a>
+                        </td>
+                        <td><a href="#" class="text-button text-decoration-none"><span>Mi&nbsp;Cuenta</span></a></td>
+                        <td><a href="#" class="text-button text-decoration-none"><span>Mi&nbsp;Carrito</span></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-1">
+
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-10" id="showcase"></div>
+        </div>
+
+        <div class="mt-4">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-end pe-4">
+                    <li class="page-item">
+                        <a class="page-link app-page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&lsaquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item app-page-item"><a class="page-link app-page-link app-page-link-active"
+                            href="#">1</a></li>
+                    <li class="page-item app-page-item"><a class="page-link app-page-link" href="#">2</a></li>
+                    <li class="page-item app-page-item"><a class="page-link app-page-link" href="#">3</a></li>
+                    <li class="page-item app-page-item"><a class="page-link app-page-link" href="#">4</a></li>
+                    <li class="page-item app-page-item"><a class="page-link app-page-link" href="#">5</a></li>
+                    <li class="page-item app-page-item">
+                        <a class="page-link app-page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&rsaquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <script src="js/local/products.js"></script>
+    <script src="js/local/app.js"></script>
+    <script src="js/vendors/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
