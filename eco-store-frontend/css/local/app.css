@@ -19,6 +19,19 @@ body {
     #app-id-header-table {
         margin: auto;
     }
+    
+    .app-showcase-card:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .app-showcase-card:hover {
+        position: absolute;
+        z-index: 100;
+        max-width: 200px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    }
 }
 
 .app-radius {
@@ -58,13 +71,10 @@ body {
     color: #009929;
 }
 
-.app-showcase-card {   
+.app-showcase-card {
+    max-width: 400px;
+    margin-bottom: 20px;
     font-weight: bold;
-}
-
-.app-showcase-card:hover {
-    top: 8px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
 }
 
 .app-showcase-card h6 {   
@@ -130,4 +140,12 @@ body {
 
 .app-page-link-active {
     color: #009929;
+}
+
+.app-hidden {
+    display: none;    
+}
+
+.app-visible {
+    display: block;    
 }
