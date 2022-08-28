@@ -34,10 +34,13 @@ const genShowcaseHTML = () => {
         col.children[0].addEventListener('mouseover', (e) => {
             e.stopPropagation();
             col.children[0].children[3].children[4].classList.remove('app-hidden');
+            console.log(col.children[0].children[1]);
+            col.children[0].children[1].classList.remove('app-hidden');
         });
         col.children[0].addEventListener('mouseleave', (e) => {
             e.stopPropagation();
             col.children[0].children[3].children[4].classList.add('app-hidden');
+            col.children[0].children[1].classList.add('app-hidden');
         });        
         col.children[0].children[1].children[0].addEventListener('click', () => {
             chFavouriteHeart(item.id);

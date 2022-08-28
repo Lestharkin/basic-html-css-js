@@ -16,12 +16,12 @@ const cardHTML = (item) => {
             <span class="position-absolute badge rounded-pill bg-danger app-showcase-card-badge ${(item.discount) ? '' : 'app-hidden'}" id="app-showcase-card-${item.id}-badge" role="discount">
                 -50%<br>2und.
             </span>            
-            <span class="position-absolute app-showcase-card-heart" id="app-showcase-card-${item.id}-heart" role="favourite">
-                <a href="#" class="text-decoration-none app-showcase-card-heart-a" id="app-showcase-card-${item.id}-heart-a">
+            <span class="position-absolute app-showcase-card-heart app-hidden" id="app-showcase-card-${item.id}-heart" role="favourite">
+                <a href="#app-showcase-card-${item.id}-heart" class="text-decoration-none app-showcase-card-heart-a" id="app-showcase-card-${item.id}-heart-a">
                     ${((item.favourite) ? heart[0]: heart[1])}
                 </a>
             </span>
-            <a href="#" class="text-decoration-none app-showcase-card-a-box">
+            <a href="#app-showcase-card-${item.id}-heart" class="text-decoration-none app-showcase-card-a-box">
                 <img src="img/products/${item.id}.jpg" class="card-img-top w-50" alt="img/products/${item.id}.jpg" id="app-showcase-card-${item.id}-heart-img">
             </a>
             <div class="card-body">
@@ -29,7 +29,7 @@ const cardHTML = (item) => {
                 <p class="card-text"><span class="app-showcase-card-amount">${item.amount}</span></p>
                 <div></div>
                 <p class="card-text"><span class="app-showcase-card-price">${String(item.price).replace('.', ',')} €</span></p>                
-                <a href="/eco-store-frontend/?id=${item.id}" class="btn btn-primary app-radius app-showcase-card-a app-hidden">
+                <a href="#app-showcase-card-${item.id}-heart" class="btn btn-primary app-radius app-showcase-card-a app-hidden">
                     <table>
                         <tr>
                             <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
