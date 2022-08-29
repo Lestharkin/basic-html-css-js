@@ -75,11 +75,52 @@
             </div>
         </div>
     </div>
-
+    <hr>
     <div class="container-fluid mt-1">
 
         <div class="row">
-            <div class="col-lg-2"></div>
+            <div class="col-lg-2 mb-4">
+                <form action="" class="app-filter-form">
+                    <div class="d-grid gap-2">
+                        <div class="form-group">                            
+                            <table class="app-radius w-100">
+                                <td>
+                                    <label for="app-filter-range" class="form-label fs-6 fw-semibold">Precio</label>
+                                </td>
+                                <td class="text-end">
+                                    <span></span>
+                                </td>
+                            </table>
+                            <input type="range" class="form-range" min="0" max="100" step="1" value="0" id="app-filter-range">
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <label for="from" class="form-label mt-4">DESDE</label>                                
+                                <table class="app-radius w-100 border border-1">
+                                    <td>
+                                        <input type="text" class="form-control text-end border border-0" id="from" placeholder="0">                                        
+                                    </td>
+                                    <td>
+                                        <span>€&nbsp;</span>
+                                    </td>
+                                </table>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="to" class="form-label mt-4">DE</label>
+                                <table class="app-radius w-100 border border-1">
+                                    <td>
+                                        <input type="to" class="form-control text-end border border-0" id="to" placeholder="100">
+                                    </td>
+                                    <td>
+                                        <span>€&nbsp;</span>
+                                    </td>
+                                </table>                                
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary app-radius app-filter-a p-2" id="app-filter-range-bnt">Filtrar</button>
+                    </div>
+                </form>
+            </div>
             <div class="col-lg-10" id="showcase"></div>
         </div>
 

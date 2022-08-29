@@ -19,9 +19,9 @@ body {
     #app-id-header-table {
         margin: auto;
     }
-    
+
     .app-showcase-card:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 
@@ -29,8 +29,8 @@ body {
     .app-showcase-card:hover {
         position: absolute;
         z-index: 100;
-        max-width: 200px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+        max-width: 260px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 
@@ -72,12 +72,12 @@ body {
 }
 
 .app-showcase-card {
-    max-width: 400px;
+    max-width: 480px;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
-.app-showcase-card h6 {   
+.app-showcase-card h6 {
     font-size: 14px;
     margin: 0px;
 }
@@ -92,19 +92,19 @@ body {
 }
 
 .app-showcase-card-a {
+    color: black;
     font-size: 12px;
-    border-color: #efa229; 
+    border-color: #efa229;
     background-color: #efa229;
 }
 
 .app-showcase-card-a:hover {
-    color: black;
-    border-color: #5ccb5f; 
-    background-color: #009929;    
+    border-color: #5ccb5f;
+    background-color: #009929;
 }
 
 .app-showcase-card-price {
-    color: #009929;        
+    color: #009929;
 }
 
 .app-showcase-card-badge {
@@ -117,7 +117,6 @@ body {
 .app-showcase-card-heart {
     top: 2%;
     left: 88%;
-    
 }
 
 .app-showcase-card-heart-a {
@@ -125,7 +124,7 @@ body {
 }
 
 .app-showcase-card-heart-a:hover {
-    color: #009929; 
+    color: #009929;
 }
 
 .app-page-item {
@@ -134,7 +133,7 @@ body {
 }
 
 .app-page-link {
-    color: #777777; 
+    color: #777777;
     font-size: 12px;
 }
 
@@ -143,9 +142,52 @@ body {
 }
 
 .app-hidden {
-    display: none;    
+    display: none;
 }
 
 .app-visible {
-    display: block;    
+    display: block;
+}
+
+.app-filter-form {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.app-filter-form:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#app-filter-range::-webkit-slider-thumb {
+    margin-top: -6px;
+    background: #009929;
+}
+
+#app-filter-range::-webkit-slider-runnable-track {
+    height: 2px;
+    background-color: #5ccb5f;
+}
+
+.app-filter-form hr {
+    background-color: black;
+}
+
+.app-filter-form input, .app-filter-form label {
+    font-size: 10px;    
+}
+
+.app-filter-a:hover {
+    color: black;
+    border-color: #efa229;
+    background-color: #efa229;
+}
+
+.app-filter-a {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    border-color: #5ccb5f;
+    background-color: #009929;
 }

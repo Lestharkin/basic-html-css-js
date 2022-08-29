@@ -1,7 +1,8 @@
 import listProducts from "../../js/local/db/products.js";
-import {heart, cardHTML} from "../../js/local/templates/cardHTML.js";
+import { heart, cardHTML } from "../../js/local/templates/cardHTML.js";
 
-const products = listProducts();
+const Allproducts = listProducts();
+let products = [...Allproducts];
 
 const pagination = {
     activepag: 1,
@@ -17,8 +18,7 @@ const chFavouriteHeart = (id) => {
     })[0];
     product.favourite = !product.favourite;
     const card = document.querySelector(`#app-showcase-card-${product.id}`);
-    card.children[1].children[0].innerHTML = ((product.favourite) ? heart[0]: heart[1]);
-    console.log(card.children[1].children[0].children[0]);
+    card.children[1].children[0].innerHTML = ((product.favourite) ? heart[0] : heart[1]);
 }
 
 const genShowcaseHTML = () => {
@@ -34,14 +34,13 @@ const genShowcaseHTML = () => {
         col.children[0].addEventListener('mouseover', (e) => {
             e.stopPropagation();
             col.children[0].children[3].children[4].classList.remove('app-hidden');
-            console.log(col.children[0].children[1]);
             col.children[0].children[1].classList.remove('app-hidden');
         });
         col.children[0].addEventListener('mouseleave', (e) => {
             e.stopPropagation();
             col.children[0].children[3].children[4].classList.add('app-hidden');
             col.children[0].children[1].classList.add('app-hidden');
-        });        
+        });
         col.children[0].children[1].children[0].addEventListener('click', () => {
             chFavouriteHeart(item.id);
         });
@@ -154,21 +153,69 @@ const genHTMLPagination = () => {
     }
 }
 
-function gointopag(index) {
-    pagination.activepag = index;
-    clearHTMLAll();
-    init();
-}
-
 const clearHTMLAll = () => {
     document.querySelector('#showcase').innerHTML = "";
     document.querySelector('#app-pagination-id .pagination').innerHTML = "";
+}
+
+function gointopag(index) {
+    pagination.activepag = index;
+    clearHTMLAll();
+    genShowcaseHTML();
+    genHTMLPagination();
+    standardizeHeightCards();
+}
+
+const filterRange = () => {
+    const range = document.querySelector('#app-filter-range');
+    const from = document.querySelector('#from');
+    const to = document.querySelector('#to');
+    const maxPrice = Math.max(...products.map(item => item.price));
+    range.oninput = function () {
+        from.value = this.value;
+    }
+    from.value = 0;
+    to.value = Math.ceil(maxPrice);
+    range.setAttribute('max', to.value);
+}
+
+const filterProducts = () => {
+    const btn = document.querySelector('#app-filter-range-bnt');
+    btn.addEventListener("click", () => {        
+        const from = document.querySelector('#from');
+        const to = document.querySelector('#to');
+        products = Allproducts.filter((item) => {
+            return item.price >= parseFloat(from.value) && item.price <= (to.value);
+        });
+        pagination.startpag = 1;
+        gointopag(1);
+        if(products.length < 1) {
+            let alert = document.createElement('div');
+            alert.classList.add('alert', 'alert-warning', 'alert-dismissible', 'fade', 'show', 'small');
+            alert.setAttribute('role', 'alert');
+            let span = document.createElement('span');
+            span.innerHTML = `El rango de precios [DESDE: ${from.value}€ EN: ${to.value}€] no obtuvo resultados.`;
+            let button = document.createElement('button');
+            button.classList.add('btn-close');
+            button.setAttribute('type', 'button');
+            button.addEventListener('click', () => {
+                products = [...Allproducts];
+                gointopag(1);
+            });
+            alert.appendChild(span);
+            alert.appendChild(button);
+            document.querySelector('#showcase').appendChild(alert);
+        }
+    });
 }
 
 const init = () => {
     genShowcaseHTML();
     genHTMLPagination();
     standardizeHeightCards();
+
+    filterRange();
+    filterProducts();
 }
 
 init();
@@ -177,3 +224,5 @@ window.addEventListener("resize", () => {
     clearHTMLAll();
     init();
 });
+
+
