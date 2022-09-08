@@ -5,12 +5,12 @@ const Allproducts = listProducts();
 let products = [...Allproducts];
 
 const pagination = {
-    activepag: 1,
+    activePage: 1,
     startpag: 1,
     getNumberOfSheets: () => Math.ceil(products.length / 12)
 }
 
-const getProductsByPage = () => products.slice(0 + (12 * (pagination.activepag - 1)), 12 + (12 * (pagination.activepag - 1)));
+const getProductsByPage = () => products.slice(0 + (12 * (pagination.activePage - 1)), 12 + (12 * (pagination.activePage - 1)));
 
 const chFavouriteHeart = (id) => {
     const product = products.filter((item) => {
@@ -96,9 +96,9 @@ const genHTMLPagination = () => {
         a.addEventListener('click', () => {
             if (pagination.startpag <= 5 && pagination.startpag > 1) {
                 pagination.startpag -= 1;
-                pagination.activepag -= 1;
+                pagination.activePage -= 1;
             }
-            gointopag(pagination.activepag);
+            gointopag(pagination.activePage);
         });
         let span = document.createElement('span');
         span.setAttribute('aria-hidden', `true`);
@@ -114,7 +114,7 @@ const genHTMLPagination = () => {
         li.setAttribute('id', `app-pagination-id-${i}`);
         let a = document.createElement('a');
         a.classList.add('text-decoration-none', 'page-link', 'app-page-link');
-        if (pagination.activepag === i) {
+        if (pagination.activePage === i) {
             a.classList.add('app-page-link-active');
         } else {
             a.classList.remove('app-page-link-active');
@@ -140,9 +140,9 @@ const genHTMLPagination = () => {
         a.addEventListener('click', () => {
             if (pagination.startpag + 5 <= nSheets) {
                 pagination.startpag += 1;
-                pagination.activepag += 1;
+                pagination.activePage += 1;
             }
-            gointopag(pagination.activepag);
+            gointopag(pagination.activePage);
         });
         let span = document.createElement('span');
         span.setAttribute('aria-hidden', `true`);
@@ -159,11 +159,9 @@ const clearHTMLAll = () => {
 }
 
 function gointopag(index) {
-    pagination.activepag = index;
-    clearHTMLAll();
-    genShowcaseHTML();
+    pagination.activePage = index;
+    refresh();
     genHTMLPagination();
-    standardizeHeightCards();
 }
 
 const filterRange = () => {
@@ -209,6 +207,34 @@ const filterProducts = () => {
     });
 }
 
+const search = () => {
+    const input = document.querySelector('#search-input');
+    const searchBtn = document.querySelector('#search-input-button');
+    searchBtn.addEventListener('click', () => {   
+        const reg = new RegExp(input.value.toLowerCase().trim());
+        products = Allproducts.filter((item) => reg.test(item.title.toLowerCase().trim())||reg.test(item.description.toLowerCase().trim()));
+        pagination.startpag = 1;
+        gointopag(1);
+        if(products.length < 1) {
+            let alert = document.createElement('div');
+            alert.classList.add('alert', 'alert-warning', 'alert-dismissible', 'fade', 'show', 'small');
+            alert.setAttribute('role', 'alert');
+            let span = document.createElement('span');
+            span.innerHTML = `El rango de precios [DESDE: ${from.value}€ EN: ${to.value}€] no obtuvo resultados.`;
+            let button = document.createElement('button');
+            button.classList.add('btn-close');
+            button.setAttribute('type', 'button');
+            button.addEventListener('click', () => {
+                products = [...Allproducts];
+                gointopag(1);
+            });
+            alert.appendChild(span);
+            alert.appendChild(button);
+            document.querySelector('#showcase').appendChild(alert);
+        }
+    });
+}
+
 const init = () => {
     genShowcaseHTML();
     genHTMLPagination();
@@ -216,6 +242,13 @@ const init = () => {
 
     filterRange();
     filterProducts();
+    search();
+}
+
+const refresh = () => {
+    clearHTMLAll();
+    genShowcaseHTML();
+    standardizeHeightCards();
 }
 
 init();

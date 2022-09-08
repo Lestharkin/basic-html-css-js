@@ -10,26 +10,26 @@ const heart = [
     </svg>
     `        
 ];
-const cardHTML = (item) => {   
+const cardHTML = item => {
     return `
         <div class="card border border-0 text-center app-showcase-card" id="app-showcase-card-${item.id}">
             <span class="position-absolute badge rounded-pill bg-danger app-showcase-card-badge ${(item.discount) ? '' : 'app-hidden'}" id="app-showcase-card-${item.id}-badge" role="discount">
-                -50%<br>2und.
+            ${(item.discountPer)}%<br>${(item.discountUni)}.
             </span>            
             <span class="position-absolute app-showcase-card-heart app-hidden" id="app-showcase-card-${item.id}-heart" role="favourite">
-                <a href="#app-showcase-card-${item.id}-heart" class="text-decoration-none app-showcase-card-heart-a" id="app-showcase-card-${item.id}-heart-a">
+                <a href="#" class="text-decoration-none app-showcase-card-heart-a " id="app-showcase-card-${item.id}-heart-a">
                     ${((item.favourite) ? heart[0]: heart[1])}
                 </a>
             </span>
-            <a href="#app-showcase-card-${item.id}-heart" class="text-decoration-none app-showcase-card-a-box">
-                <img src="img/products/${item.id}.jpg" class="card-img-top w-50" alt="img/products/${item.id}.jpg" id="app-showcase-card-${item.id}-heart-img">
+            <a href="#app-showcase-card-${item.id}-img" class="text-decoration-none app-showcase-card-a-box">
+                <img src="img/products/${item.id}.jpg" class="card-img-top w-50" alt="img/products/${item.id}.jpg" id="app-showcase-card-${item.id}-img">
             </a>
             <div class="card-body">
                 <h6 class="card-title"><strong>${item.title}</strong></h6>
                 <p class="card-text"><span class="app-showcase-card-amount">${item.amount}</span></p>
                 <div></div>
                 <p class="card-text"><span class="app-showcase-card-price">${String(item.price).replace('.', ',')} €</span></p>                
-                <a href="#app-showcase-card-${item.id}-heart" class="btn btn-primary app-radius app-showcase-card-a app-hidden">
+                <a href="#" class="btn btn-primary app-radius app-showcase-card-a app-hidden">
                     <table>
                         <tr>
                             <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"

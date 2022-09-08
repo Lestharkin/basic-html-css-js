@@ -17,9 +17,9 @@ const products = () => [
         "price": 15.50,
         "description": "Sale a: 0,26 €/ud.\nParches de oro de 24 kt rejuvenecedores para contorno de ojos de Natura Siberica. Parches para ojos con efecto rejuvenecedor enriquecidos con oro de 24kt. Su acción descongestiona la piel, la suaviza y mejora su luminosidad. Estos parches con oro de 24kt son la opción perfecta para rejuvenecer la mirada en pocos minutos. Basados en activo postbiótico único y extractos fermentados de mora de los pantanos norteña y frambuesa silvestre, contienen dos activos únicos para combatir los signos de envejecimiento: el complejo de polipéptidos SYN-COLL® y oro de 24kt. Gracias a ellos, estimulan la síntesis de colágeno en las células de la piel y ayudan a suavizar las arrugas.",
 
-        "favourite": false,
-        "discount": false, "discountPer": 0,
-        "discountUni": ""
+        "favourite": true,
+        "discount": true, "discountPer": -30,
+        "discountUni": "3Und."
     },
     {
         "id": 3,
@@ -28,7 +28,7 @@ const products = () => [
         "price": 15.50,
         "description": "Parches iluminadores para el contorno de ojos de Natura Siberica. 60 Parches para ojos con efecto iluminador que hidratan la piel del contorno, le devuelven la vitalidad y mejoran su protección para mantenerla joven. Estos parches iluminadores son una solución rápida y cómoda para darle a tus ojos ese toque de luz y vitalidad que el estrés y la vida urbana les van quitando. Con su base de biome con activo postbiótico único y extractos fermentados de mora de los pantanos norteña y frambuesa silvestre ayudan al microbioma de la piel a aumentar su resistencia y mejorar su luminosidad. La vitamina C presente en su fórmula mejora el tono y la textura del contorno para ayudar a recuperar su brillo natural, y la niacinamida contribuye a fortalecer la barrera de hidratación de la epidermis, dando lugar a un resultado suave, esplendoroso y rejuvenecido.",
 
-        "favourite": false,
+        "favourite": true,
         "discount": false, "discountPer": 0,
         "discountUni": ""
     },
@@ -273,7 +273,7 @@ const products = () => [
         "favourite": false,
         "discount": true, "discountPer": -50,
         "discountUni": "2und."
-    }/*,
+    },
     {
         "id": 1,
         "title": "Aceite esencial de Clavo",
@@ -548,7 +548,150 @@ const products = () => [
         "favourite": false,
         "discount": true, "discountPer": -50,
         "discountUni": "2und."
-    },*/
+    },
+    {
+        "id": 25,
+        "title": "Aceite de CBD 5%",
+        "amount": "15ML.",
+        "price": 20.95,
+        "description": "Sale a: 20,95 €/ud.\nAceite de semillas de cáñamo con CBD al 5%. Adecuado para el uso diario en personas con dolor crónico o de intensidad alta. El aceite de cáñamo con CBD de Terra Verda es orgánico, vegano y libre de crueldad animal. Su exclusivo método de extracción permite mantener todas las propiedades de la semilla de cáñamo sin trazos de tóxicos ni alcoholes. Puedes usarlo diariamente para aliviar las dolencias articulares o musculares por el dolor crónico, días estresantes o la actividad deportiva.",
+
+        "favourite": false,
+        "discount": true, "discountPer": -50,
+        "discountUni": "2und."
+    },
+    {
+        "id": 15,
+        "title": "Aceite Corporal de Rosa Mosqueta",
+        "amount": "100ML.",
+        "price": 22.90,
+        "description": "Sale a: 229,00 €/L.\nLa principal acción de la Rosa Mosqueta es la regeneración de la piel y elasticidad, aportando tonicidad a la piel. Combate los primeros signos de envejecimiento de la piel. Este producto combina la acción alisante de la rosa mosqueta con las propiedades hidratantes del aceite de jojoba. Da como resultado un aceite muy nutritivo, de una textura ligera y muy absorvente. Testado dermatológicamente en todo tipo de pieles, pero no en animales. Apto para veganos. De uso diario.",
+
+        "favourite": false,
+        "discount": false, "discountPer": 0,
+        "discountUni": ""
+    },
+    {
+        "id": 16,
+        "title": "Aceite corporal Embellecedor del Busto",
+        "amount": "n/a",
+        "price": 81.70,
+        "description": "Sale a: 817,00 €/L.\nAceite corporal empleado para moldear y realzar el busto dándole una apariencia de mayor volumen. Hidrata y nutre ayudando a prevenir las estrías de esta zona tan sensible. Utilízalo directamente con ligeros masajes circulares hasta su total absorción. Puedes utilizarlo de forma diaria, para mejores resultados te aconsejamos de dos a tres aplicaciones al día.",
+
+        "favourite": true,
+        "discount": true, "discountPer": -50,
+        "discountUni": "2und."
+    },
+    {
+        "id": 17,
+        "title": "Aceite corporal Reafirmante de Tejidos",
+        "amount": "n/a",
+        "price": 60.00,
+        "description": "Sale a: 400,00 €/L.\nAceite corporal indispensable para prevenir la pérdida de firmeza de los tejidos y reafirmar las zonas que presentan flacidez. Puedes hidratar tu cuerpo de forma diaria con este aceite y beneficiarte de sus propiedades reafirmantes. Con ingredientes totalmente naturales consigue una hidratación en las capas profundas de la piel.",
+
+        "favourite": false,
+        "discount": false, "discountPer": 0,
+        "discountUni": ""
+    },
+    {
+        "id": 18,
+        "title": "Aceite corporal Reafirmante del Busto",
+        "amount": "n/a",
+        "price": 81.70,
+        "description": "Sale a: 817,00 €/L.\nAceite corporal específico de tratamiento que reafirma eficazmente el seno caído a la vez que hidrata y suaviza la piel devolviéndole su belleza. El tratamiento natural con este aceite realza el busto para que se muestre más bello. Este aceite está libre de hormonas y otros componentes químicos, se basa en ingredientes naturales con propiedades hidratantes y estimuladoras.",
+
+        "favourite": false,
+        "discount": false, "discountPer": 0,
+        "discountUni": ""
+    },
+    {
+        "id": 19,
+        "title": "Aceite corporal Reina de Egipto",
+        "amount": "n/a",
+        "price": 57.30,
+        "description": "Aceite corporal de exótica fragancia que nutre en profundidad, combate el envejecimiento cutáneo, regenera y alisa, a la vez que aporta autoestima y confianza. Este aceite es muy usado y recomendado entre nuestros clientes gracias a su versatilidad y eficacia.",
+
+        "favourite": true,
+        "discount": true, "discountPer": -50,
+        "discountUni": "2und."
+    },
+    {
+        "id": 20,
+        "title": "Aceite daúrico corporal de Natura Siberica",
+        "amount": "n/a",
+        "price": 18.95,
+        "description": "Sale a: 51,22 €/L.\nRelaja tu cuerpo con este fantástico producto con el que podrás disfrutar de momentos únicos. Aceite daúrico corporal es perfecto para pieles secas. Una explosión de sensaciones gracias a su composición que revitalizará tu piel.",
+
+        "favourite": false,
+        "discount": false, "discountPer": 0,
+        "discountUni": ""
+    },
+    {
+        "id": 21,
+        "title": "Aceite de Aguacate corporal",
+        "amount": "125ML.",
+        "price": 15.00,
+        "description": "Sale a: 120,00 €/L.\nEl aceite de aguacate actúa un bálsamo perfecto para la piel. Destaca por su efecto nutritivo, protector y regenerante. Indicado para pieles secas, agrietadas y envejecidas. Tiene una excelente penetración y además ayuda a filtrar de forma natural la radiación solar.",
+
+        "favourite": false,
+        "discount": false, "discountPer": 0,
+        "discountUni": ""
+    },
+    {
+        "id": 22,
+        "title": "Aceite de almendras corporal Bio",
+        "amount": "125ML.",
+        "price": 14.95,
+        "description": "Sale a: 119,60 €/L.\nHidrata y nutre tu piel con este aceite de almendras ecológico de primera prensada en frío. Te recomendamos su uso después de la ducha con la piel húmeda, mejora su absorción. Puedes utilizarlo de base para formularlo con otro aceites, aceites esenciales y lociones.",
+
+        "favourite": false,
+        "discount": false, "discountPer": 0,
+        "discountUni": ""
+    },
+    {
+        "id": 23,
+        "title": "Aceite de Argán Bio",
+        "amount": "30ML.",
+        "price": 12.99,
+        "description": "Sale a: 433,00 €/L.\nEste aceite vegetal rico en vitaminas y antioxidantes te hará lucir una piel radiante. El aceite de argán te aportará la luminosidad y elasticidad que necesitas para presumir de belleza natural. Ideal para todo tipo de pieles y capaz de nutrir las capas profundas de la piel.",
+
+        "favourite": false,
+        "discount": false, "discountPer": 0,
+        "discountUni": ""
+    },
+    {
+        "id": 24,
+        "title": "Aceite de Argán Bio",
+        "amount": "100ML.",
+        "price": 25.95,
+        "description": "Sale a: 259,50 €/L.\nEste aceite vegetal rico en vitaminas y antioxidantes te hará lucir una piel radiante. El aceite de argán te aportará la luminosidad y elasticidad que necesitas para presumir de belleza natural. Ideal para todo tipo de pieles y capaz de nutrir las capas profundas de la piel.",
+
+        "favourite": false,
+        "discount": false, "discountPer": 0,
+        "discountUni": ""
+    },
+    {
+        "id": 25,
+        "title": "Aceite de CBD 5%",
+        "amount": "15ML.",
+        "price": 20.95,
+        "description": "Sale a: 20,95 €/ud.\nAceite de semillas de cáñamo con CBD al 5%. Adecuado para el uso diario en personas con dolor crónico o de intensidad alta. El aceite de cáñamo con CBD de Terra Verda es orgánico, vegano y libre de crueldad animal. Su exclusivo método de extracción permite mantener todas las propiedades de la semilla de cáñamo sin trazos de tóxicos ni alcoholes. Puedes usarlo diariamente para aliviar las dolencias articulares o musculares por el dolor crónico, días estresantes o la actividad deportiva.",
+
+        "favourite": false,
+        "discount": true, "discountPer": -50,
+        "discountUni": "2und."
+    },
+    {
+        "id": 25,
+        "title": "Aceite de CBD 5%",
+        "amount": "15ML.",
+        "price": 20.95,
+        "description": "Sale a: 20,95 €/ud.\nAceite de semillas de cáñamo con CBD al 5%. Adecuado para el uso diario en personas con dolor crónico o de intensidad alta. El aceite de cáñamo con CBD de Terra Verda es orgánico, vegano y libre de crueldad animal. Su exclusivo método de extracción permite mantener todas las propiedades de la semilla de cáñamo sin trazos de tóxicos ni alcoholes. Puedes usarlo diariamente para aliviar las dolencias articulares o musculares por el dolor crónico, días estresantes o la actividad deportiva.",
+
+        "favourite": false,
+        "discount": true, "discountPer": -50,
+        "discountUni": "2und."
+    }
 ];
 
 export default products;

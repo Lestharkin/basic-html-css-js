@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+ 
     <div class="container-fluid mt-1">
         <div class="row app-header">
             <div class="col-sm-3 text-center">
@@ -22,9 +22,9 @@
                     <form>
                         <input type="search" placeholder="¿Qué producto estás buscando...?" name="search-input"
                             id="search-input" class="p-1 ps-3" />
-                        <button class="btn btn-outline-success border-0 app-radius" type="submit"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-search" viewbox="0 0 16 16">
+                        <button class="btn btn-outline-success border-0 app-radius" type="button"
+                            id="search-input-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-search" viewbox="0 0 16 16">
                                 <path
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                             </svg>
@@ -33,10 +33,10 @@
                 </div>
             </div>
             <div class="col-sm-3 d-flex align-items-center p-1">
-                <table class="app-header-table text-center" id="app-id-header-table">
+                <table class="app-header-table text-center" id="app-header-table">
                     <tr>
                         <td>
-                            <a href="#" class="text-decoration-none">
+                            <a href="#" class="text-decoration-none app-header-table-myfavourites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#009929"
                                     class="bi bi-heart" viewbox="0 0 16 16">
                                     <path
@@ -56,7 +56,7 @@
                             </a>
                         </td>
                         <td>
-                            <a href="" class="text-decoration-none">
+                            <a href="#" class="text-decoration-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#009929"
                                     class="bi bi-basket3" viewbox="0 0 16 16">
                                     <path
@@ -66,7 +66,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><a href="#" class="text-button text-decoration-none"><span>Mis&nbsp;Favoritos</span></a>
+                        <td><a href="#"
+                                class="text-button text-decoration-none app-header-table-myfavourites"><span>Mis&nbsp;Favoritos</span></a>
                         </td>
                         <td><a href="#" class="text-button text-decoration-none"><span>Mi&nbsp;Cuenta</span></a></td>
                         <td><a href="#" class="text-button text-decoration-none"><span>Mi&nbsp;Carrito</span></a></td>
@@ -75,14 +76,13 @@
             </div>
         </div>
     </div>
-    <hr>
-    <div class="container-fluid mt-1">
 
+    <div class="container-fluid mt-1">
         <div class="row">
             <div class="col-lg-2 mb-4">
                 <form action="" class="app-filter-form">
                     <div class="d-grid gap-2">
-                        <div class="form-group">                            
+                        <div class="form-group">
                             <table class="app-radius w-100">
                                 <td>
                                     <label for="app-filter-range" class="form-label fs-6 fw-semibold">Precio</label>
@@ -91,14 +91,16 @@
                                     <span></span>
                                 </td>
                             </table>
-                            <input type="range" class="form-range" min="0" max="100" step="1" value="0" id="app-filter-range">
+                            <input type="range" class="form-range" min="0" max="100" step="1" value="0"
+                                id="app-filter-range">
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6">
-                                <label for="from" class="form-label mt-4">DESDE</label>                                
+                                <label for="from" class="form-label mt-4">DESDE</label>
                                 <table class="app-radius w-100 border border-1">
                                     <td>
-                                        <input type="text" class="form-control text-end border border-0" id="from" placeholder="0">                                        
+                                        <input type="text" class="form-control text-end border border-0" id="from"
+                                            placeholder="0">
                                     </td>
                                     <td>
                                         <span>€&nbsp;</span>
@@ -109,29 +111,36 @@
                                 <label for="to" class="form-label mt-4">DE</label>
                                 <table class="app-radius w-100 border border-1">
                                     <td>
-                                        <input type="to" class="form-control text-end border border-0" id="to" placeholder="100">
+                                        <input type="text" class="form-control text-end border border-0" id="to"
+                                            placeholder="100">
                                     </td>
                                     <td>
                                         <span>€&nbsp;</span>
                                     </td>
-                                </table>                                
+                                </table>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary app-radius app-filter-a p-2" id="app-filter-range-bnt">Filtrar</button>
+                        <button type="button" class="btn btn-primary app-radius app-filter-a p-2"
+                            id="app-filter-range-bnt">Filtrar</button>
                     </div>
                 </form>
             </div>
             <div class="col-lg-10" id="showcase"></div>
         </div>
 
-        <div class="mt-4" id="app-pagination-id">
-            <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-end pe-4"></ul>
-            </nav>
+        <div class="container-fluid mt-1">
+            <div class="mt-4 mb-4" id="app-pagination-id">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-end pe-4"></ul>
+                </nav>
+            </div>
         </div>
 
-    </div>
-    <script src="js/local/app.js" type="module"></script>
+    </div>    
+
+    <!-- <div id="modal"></div> -->
+
+    <script src="js/local/index.js" type="module"></script>
     <script src="js/vendors/bootstrap.bundle.min.js"></script>
 </body>
 

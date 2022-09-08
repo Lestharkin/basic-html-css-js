@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="css/local/app.css">
+    <title>Buena vida</title>
+</head>
+
+<body>
+
+    <div class="container-fluid mt-1">
+        <div class="row app-header">
+            <div class="col-sm-3 text-center">
+                <img src="img/logo/logo.jpg" alt="" class="img-fluid app-radius w-75 p-1">
+            </div>
+            <div class="col-sm-6 d-flex align-items-center p-1">
+                <div class="app-radius app-border-color w-100 text-center p-1">
+                    <form>
+                        <input type="search" placeholder="¿Qué producto estás buscando...?" name="search-input"
+                            id="search-input" class="p-1 ps-3" />
+                        <button class="btn btn-outline-success border-0 app-radius" type="button"
+                            id="search-input-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-search" viewbox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-3 d-flex align-items-center p-1">
+                <table class="app-header-table text-center" id="app-header-table">
+                    <tr>
+                        <td>
+                            <a href="#" class="text-decoration-none app-header-table-myfavourites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#009929"
+                                    class="bi bi-heart" viewbox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#" class="text-decoration-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#009929"
+                                    class="bi bi-person-circle" viewbox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#" class="text-decoration-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#009929"
+                                    class="bi bi-basket3" viewbox="0 0 16 16">
+                                    <path
+                                        d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
+                                </svg>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"
+                                class="text-button text-decoration-none app-header-table-myfavourites"><span>Mis&nbsp;Favoritos</span></a>
+                        </td>
+                        <td><a href="#" class="text-button text-decoration-none"><span>Mi&nbsp;Cuenta</span></a></td>
+                        <td><a href="#" class="text-button text-decoration-none"><span>Mi&nbsp;Carrito</span></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-1 p-4">
+        <h1>Parcial desarrollo de Apps-web</h1>
+        <p class="">Debe probar la funcionalidad, la apariencia y el diseño del proyecto para el examen parcial de un compañero.
+            Responda las preguntas en su formulario de Microsoft Teams para la URL adjunta a su ID. Recuerde ser
+            imparcial y mantenerse en el contexto de los requisitos entregados al comienzo del ejercicio. Además, si
+            detectas plagio en la codificación, deberás denunciarlo (de igual manera, el código será revisado luego de
+            esta prueba).</p>
+        <div class="container-fluid w-75">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">URL Test</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">431755</th>
+                        <td><a href="./parcial-dweb/426145/index.html" target="_blank">app-web aquí</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">429162</th>
+                        <td><a href="./parcial-dweb/409141/index.html" target="_blank">app-web aquí</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">400036</th>
+                        <td><a href="./parcial-dweb/427786/index.html" target="_blank">app-web aquí</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">374545</th>
+                        <td><a href="./parcial-dweb/400739/index.html" target="_blank">app-web aquí</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">430659</th>
+                        <td><span class="alert alert-danger p-0">No hay entrega</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">428497</th>
+                        <td><a href="./parcial-dweb/430876/index.html" target="_blank">app-web aquí</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">427737</th>
+                        <td><a href="./parcial-dweb/400505/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">432172</th>
+                        <td><a href="./parcial-dweb/429176/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">430669</th>
+                        <td><a href="./parcial-dweb/219245/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr><tr>
+                        <th scope="row">427743</th>
+                        <td><a href="./parcial-dweb/426959/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">427744</th>
+                        <td><a href="./parcial-dweb/430877/Login.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">408397</th>
+                        <td><a href="./parcial-dweb/421816/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">376546</th>
+                        <td><a href="./parcial-dweb/422774/html/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">404384</th>
+                        <td><a href="./parcial-dweb/428333/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">396221</th>
+                        <td><a href="./parcial-dweb/382070/" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">428125</th>
+                        <td><a href="./parcial-dweb/402237/" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">428512</th>
+                        <td><a href="./parcial-dweb/428339/" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">439665</th>
+                        <td><span class="alert alert-danger p-0">No hay entrega</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">426145</th>
+                        <td><a href="./parcial-dweb/429178/" target="_blank">app-web aquí</a></td>
+
+                    </tr><tr>
+                        <th scope="row">409141</th>
+                        <td><a href="./parcial-dweb/430882/" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">427786</th>
+                        <td><a href="./parcial-dweb/415033/" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">400739</th>
+                        <td><a href="./parcial-dweb/431755/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">430876</th>
+                        <td><a href="./parcial-dweb/429162/" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">400505</th>
+                        <td><a href="./parcial-dweb/400036/" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">429176</th>
+                        <td><a href="./parcial-dweb/374545/" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">219245</th>
+                        <td><a href="./parcial-dweb/428497/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">426959</th>
+                        <td><a href="./parcial-dweb/427737/" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">430877</th>
+                        <td><a href="./parcial-dweb/432172/" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">421816</th>
+                        <td><a href="./parcial-dweb/430669/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr><tr>
+                        <th scope="row">353580</th>
+                        <td><a href="./parcial-dweb/427743/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">422774</th>
+                        <td><a href="./parcial-dweb/427744/" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">387496</th>
+                        <td><a href="./parcial-dweb/408397/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">428333</th>
+                        <td><a href="./parcial-dweb/376546/" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">382070</th>
+                        <td><a href="./parcial-dweb/404384/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">402237</th>
+                        <td><a href="./parcial-dweb/396221/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">428339</th>
+                        <td><a href="./parcial-dweb/428125/" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">429178</th>
+                        <td><a href="./parcial-dweb/428512/index.html" target="_blank">app-web aquí</a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">430882</th>
+                        <td><a href="#na" id="na" target="_blank">app-web aquí</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">415033</th>
+                        <td><a href="#nai" id="nai" target="_blank">app-web aquí</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+    <script src="js/vendors/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
